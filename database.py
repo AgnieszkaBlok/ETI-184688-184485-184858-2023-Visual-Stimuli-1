@@ -13,8 +13,8 @@ engine = create_engine(
 )
 
 #with engine.connect() as conn:
-#  result = conn.execute(text("select * from interviewee"))
- # print(result.all())
+ # result = conn.execute(text("select * from interviewee"))
+  #print(result.all())
 
 def add_into_file(interviewee): 
   with engine.connect() as conn:

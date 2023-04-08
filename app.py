@@ -1,19 +1,14 @@
-from flask import Flask, render_template, request, jsonify
-#from database import add_into_file
+from flask import Flask, render_template, request
+from database import add_into_file
 
-app = Flask(__name__, template_folder='templates', static_folder='static')
+app = Flask(__name__ )#, template_folder='templates', static_folder='static')
 
 
 @app.route("/")
 def index():
   return render_template('form.html')
 
-@app.route("/form/results", methods=['post'])
-def submit_page():
-  data = request.args
-  return jsonify(data)
 
-""""
 @app.route('/1')
 def page_1():
   return render_template('test1.html')
@@ -37,9 +32,15 @@ def survey():
 @app.route('/5')
 def results():
   return render_template('results.html')
-"""
-  #add_into_file(data)
-  #return render_template('results.html', data=data)
+
+
+@app.route("/form/test1", methods=['get'])
+def submit_page():
+  data = request.args
+
+  add_into_file(data)
+  return render_template('test1.html', data=data)
+
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', debug=True)
