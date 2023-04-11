@@ -1,6 +1,13 @@
 <!DOCTYPE HTML>
 <html>
   <head>
+       <style>
+        #kwadrat {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+    </style>
       <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
       <meta charset="UTF-8">
       <meta name="description" content="Proejkt RAIM/HIED">
@@ -18,6 +25,12 @@
     
     <div class="wrapper">
       <h2>To start a test click button bellow</h2>
+         <h1>Test ma za zadanie sprawdzić twój czas rekacji na kolor zielony</h1>
+    <h2>Po zobaczeniu koloru zielonego kliknij w przycisk</h2>
+    <div id="kwadrat"></div>
+    <button id="przycisk">Start</button>
+    <p id="czas-reakcji"></p>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
     </div>
 
     <a href="/2">

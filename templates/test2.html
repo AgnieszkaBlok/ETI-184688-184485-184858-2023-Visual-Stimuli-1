@@ -18,6 +18,33 @@
     
     <div class="wrapper">
       <h2>To start a test click button bellow</h2>
+         <div style="text-align: center">
+      <img src="{{ url_for('static', filename='photo.png') }}" width="900" height="500">
+  </div>
+
+<div style="text-align: center">
+    <h2>Choose an answer:</h2>
+    <form method="POST" action="/wyniki" >
+         <input type="hidden" name="start_time" value="{{ start_time }}">
+      <img src="{{ url_for('static', filename='answer1.png') }}" >
+        <label>
+            <input type="radio" name="value" value="1">
+        </label>
+      <img src="{{ url_for('static', filename='answer2.png') }}">
+        <label>
+            <input type="radio" name="value" value="2">
+        </label>
+      <img src="{{ url_for('static', filename='answer3.png') }}">
+        <label>
+            <input type="radio" name="value" value="3">
+        </label>
+      <img src="{{ url_for('static', filename='answer4.png') }}">
+        <label>
+            <input type="radio" name="value" value="4">
+        </label><br><br>
+
+    </form>
+</div>
     </div>
   
     <a href="/3">
